@@ -1,0 +1,28 @@
+GENERAL INFORMATION ON SWIFT LINUX
+
+Objective:
+The objective of Swift Linux is to create an operating system that offers lightweight operation, a large repository, AND user-friendliness.  This project will be considered complete when it has a license, the ability to play DVDs out of the box, a CD/DVD burning program with verification, a working firewall, and an installer that writes the GRUB entry as Swift Linux instead of Linux Mint.  This project will be considered successful when large numbers of Windows XP users convert to Swift Linux instead of "upgrading" to Windows 7, "upgrading" to Windows 8, or replacing their computers.
+
+Context:
+At the time Swift Linux was conceived in late 2010, no distro had the combination of lightweight operation, a large repository, AND user-friendliness.  Linux Mint was user-friendly and fully compatible with the large Ubuntu software repository but had a high RAM requirement (512 MB).  Puppy Linux was user-friendly and had a low RAM requirement (only 128 MB) but had a weak repository.  antiX Linux (a lightweight version of MEPIS Linux) was the distro that came closest to combining the strengths of Linux Mint and Puppy Linux.
+
+In fall 2011, Linux Mint Debian Edition (LMDE) was officially released and emerged as a better base distro than antiX/MEPIS Linux.  LMDE provided the superior driver/codec support and user-friendliness of the traditional Ubuntu-based editions of Linux Mint without the heavy Ubuntu overhead.  LMDE still offered a large repository due to its Debian base.  antiX Linux proved that it was possible to lighten a heavyweight Linux distro enough to run on computers from the Windows 98 era.
+
+Swift Linux is based on LMDE with Xfce.  The GNOME version of LMDE is heavier and slower.  Also, the controversy over GNOME 3 and uncertainties about the future of GNOME further push the balance in favor of the Xfce version.  In the end, the Xfce vs. GNOME decision is moot, because neither desktop environment is suitable for the mission of Swift Linux.  As a derivative of LMDE, Swift Linux aims to provide the merits of LMDE in a lighter and faster package that fits onto a CD and works on computers from the Windows 98 era.  
+
+Swift Linux is available as a 32-bit distro only.  A 32-bit distro is suited for old computers while a 64-bit distro is not.  A 64-bit distro only provides a clear advantage over a 32-bit distro on computers with at least 4 GB of RAM.  Computers advanced enough to have at least 4 GB of RAM provide extremely fast performance with LMDE and are usually equipped with a DVD burner, so the merits of Swift Linux are less relevant.  Thus, the upper end of the Linux market is NOT part of the target market of Swift Linux.
+
+Goals:
+1.  Provide Windows XP users a Linux distro that allows them to continue using their old computers instead of replacing them with new ones when Windows XP support is terminated in 2014.
+2.  Provide FreeGeek groups a lighter alternative to Ubuntu Linux so they can revive computers with little or no resale value.
+3.  Keep the Swift Linux ISO for all editions small enough to fit onto a CD until DVD burners become universal even on 10-year-old computers.
+4.  Become one of the top 10 Linux distributions on DistroWatch by 2014.
+
+Deliverables:
+1.  ISO files small enough to fit onto a CD
+2.  Regular Swift Linux: This is the basic building block of Swift Linux and is the basis for all other editions.  This is a lightened version of LMDE.  LibreOffice is retained.
+3.  Diet Swift Linux: This is Regular Swift Linux WITHOUT LibreOffice.  This edition of Swift Linux targets the bottom of the Linux market and is intended for Linux users who consider LibreOffice to be bloatware.  AbiWord and Gnumeric are provided as lightweight replacements.
+4.  Special Editions: The special editions of Swift Linux include Taylor Swift Linux, Minnesota Swift Linux, and Chicago Swift Linux.  These special editions are Regular Swift Linux with special wallpaper and a startup sound clip.  Hannah Montana Linux is the inspiration for these pure marketing gimmicks.  Note that all special editions must have a positive connotation and be consistent with the image of Swift Linux.
+
+Scope:
+Modifying LMDE is within the scope of Swift Linux.  Modifying Debian Linux is not.

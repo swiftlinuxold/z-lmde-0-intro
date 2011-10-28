@@ -1,0 +1,34 @@
+SUMMARY
+1.  Install LMDE in VirtualBox.  You need the guest OS for working on Swift Linux.  Unless otherwise noted, ALL procedures described in this file are to be done in the guest OS.
+2.  Set up guest additions to allow you to share files between the host and guest OS.
+3.  Fill the package directory.
+4.  Install and set up Git.
+
+INSTALLING LMDE
+1.  Install Linux Mine Debian Edition with Xfce as the guest OS in VirtualBox.
+2.  When you are finished, shut down the guest OS and take a snapshot.
+
+SET UP GUEST ADDITIONS (allows you to share files between the host and guest OS)
+1.  In your host OS as the user (NOT root), enter "mkdir ~/guest".
+2.  From the Guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your host OS.  Select "Make Permanent" option but NOT the auto-mount option.
+3.  Go to Devices -> Guest Additions.
+4.  As root in the Guest OS, enter the following commands:
+mkdir /mnt/host
+mount /media/cdrom
+cd /media/cdrom
+sh VBoxLinuxAdditions.run
+5.  After the guest additions have been added, enter as root in the guest OS "mount -t vboxsf guest /mnt/host".  
+6.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host OS.
+7.  PLEASE NOTE: The file sharing capability is NOT automatic.  Each time you boot up the guest OS, you'll have to become root in the guest OS and enter "mount -t vboxsf guest /mnt/host" in order to resume sharing files between the guest and host OS.
+8.  Power down VirtualBox and take a snapshot.
+
+FILL THE PACKAGE DIRECTORY
+1.  Some of the information in the package directory will be outdated, and you need to update it.  As root, enter "apt-get update" to update the package directory.
+2.  After the package directory has been filled, power down VirtualBox and take a snapshot.
+
+INSTALL AND SET UP GIT
+1.  Follow the instructions at http://help.github.com/linux-set-up-git/ .
+2.  Enter the command "mkdir ~/develop".  This is the directory where all Git repositories will be held.
+3.  Power down VirtualBox and take a snapshot.
+
+CONGRATULATIONS!  You now have everything you need to work on Swift Linux, yet still have the original LMDE configurations and setup.  From time to time, you'll need to return to the latest snapshot in VirtualBox to see the impact of your changes on the original LMDE Linux setup.

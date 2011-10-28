@@ -1,0 +1,9 @@
+0-intro: basic procedures for working on Swift Linux
+
+1-build: integrates all of the other repositories to transform antiX Linux into Swift Linux
+
+9-test-github: for testing out GitHub if you're not already familiar with it
+
+z-antix-x: repositories left over from the antiX Era that need to be updated for the LMDE Era
+
+z-obsolete-x: obsolete repositories kept for historical purposes
