@@ -13,7 +13,6 @@ SET UP GUEST ADDITIONS (allows you to share files between the host and guest OS)
 2.  Click on the VBOXADDITIONS icon that appears on the desktop.  This mounts the guest additions.
 3.  As root in the guest OS, enter the following commands:
 mkdir /mnt/host
-mount /media/VBOX*
 cd /media/VBOX*
 sh VBoxLinuxAdditions.run
 4.  From the guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your host OS.  Select "Make Permanent" option but NOT the auto-mount option.
