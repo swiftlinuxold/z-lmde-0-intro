@@ -9,18 +9,19 @@ INSTALLING LMDE
 2.  When you are finished, shut down the guest OS and take a snapshot.
 
 SET UP GUEST ADDITIONS (allows you to share files between the host and guest OS)
-1.  In your host OS as the user (NOT root), enter "mkdir ~/guest".
-2.  From the Guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your host OS.  Select "Make Permanent" option but NOT the auto-mount option.
-3.  Go to Devices -> Guest Additions.
-4.  As root in the Guest OS, enter the following commands:
+1.  In the guest OS, go to the VirtualBox bar. Go to Devices -> Guest Additions.
+2.  Click on the VBOXADDITIONS icon that appears on the desktop.  This mounts the guest additions.
+3.  As root in the guest OS, enter the following commands:
 mkdir /mnt/host
-mount /media/cdrom
-cd /media/cdrom
+mount /media/VBOX*
+cd /media/VBOX*
 sh VBoxLinuxAdditions.run
-5.  After the guest additions have been added, enter as root in the guest OS "mount -t vboxsf guest /mnt/host".  
-6.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host OS.
-7.  PLEASE NOTE: The file sharing capability is NOT automatic.  Each time you boot up the guest OS, you'll have to become root in the guest OS and enter "mount -t vboxsf guest /mnt/host" in order to resume sharing files between the guest and host OS.
-8.  Power down VirtualBox and take a snapshot.
+4.  In your host OS as the user (NOT root), enter "mkdir ~/guest".
+5.  From the guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your host OS.  Select "Make Permanent" option but NOT the auto-mount option.
+6.  As root in the guest OS, enter "mount -t vboxsf guest /mnt/host".  
+7.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host OS.
+8.  PLEASE NOTE: The file sharing capability is NOT automatic.  Each time you boot up the guest OS, you'll have to become root in the guest OS and enter "mount -t vboxsf guest /mnt/host" in order to resume sharing files between the guest and host OS.
+9.  Power down VirtualBox and take a snapshot.
 
 UPDATE THE PACKAGE DIRECTORY
 1.  Some of the information in the package directory will be outdated, and you need to update it.  As root, enter "apt-get update" to update the package directory.
