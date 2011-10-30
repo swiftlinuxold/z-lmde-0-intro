@@ -16,12 +16,11 @@ mkdir /mnt/host
 mount /media/VBOX*
 cd /media/VBOX*
 sh VBoxLinuxAdditions.run
-4.  In your host OS as the user (NOT root), enter "mkdir ~/guest".
-5.  From the guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your host OS.  Select "Make Permanent" option but NOT the auto-mount option.
-6.  As root in the guest OS, enter "mount -t vboxsf guest /mnt/host".  
-7.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host OS.
-8.  PLEASE NOTE: The file sharing capability is NOT automatic.  Each time you boot up the guest OS, you'll have to become root in the guest OS and enter "mount -t vboxsf guest /mnt/host" in order to resume sharing files between the guest and host OS.
-9.  Power down VirtualBox and take a snapshot.
+4.  From the guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your host OS.  Select "Make Permanent" option but NOT the auto-mount option.
+5.  As root in the guest OS, enter "mount -t vboxsf guest /mnt/host".  
+6.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host OS.  If you add a test file to the /home/(host OS username)/share directory in the host OS, it should be available in the /mnt/host directory in the guest OS.  (You may need to reload Thunar to see it.)
+7.  PLEASE NOTE: The file sharing capability is NOT automatic.  Each time you boot up the guest OS, you'll have to become root in the guest OS and enter "mount -t vboxsf guest /mnt/host" in order to resume sharing files between the guest and host OS.
+8.  Power down VirtualBox and take a snapshot.
 
 UPDATE THE PACKAGE DIRECTORY
 1.  Some of the information in the package directory will be outdated, and you need to update it.  As root, enter "apt-get update" to update the package directory.
