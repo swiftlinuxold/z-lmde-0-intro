@@ -1,7 +1,7 @@
 SUMMARY
 1.  Install LMDE in VirtualBox.  You need the guest OS for working on Swift Linux.  Unless otherwise noted, ALL procedures described in this file are to be done in the guest OS.
 2.  Set up guest additions to allow you to share files between the host and guest OS.
-3.  Fill the package directory.
+3.  Update the package directory.
 4.  Install and set up Git.
 
 INSTALLING LMDE
@@ -22,7 +22,7 @@ sh VBoxLinuxAdditions.run
 7.  PLEASE NOTE: The file sharing capability is NOT automatic.  Each time you boot up the guest OS, you'll have to become root in the guest OS and enter "mount -t vboxsf guest /mnt/host" in order to resume sharing files between the guest and host OS.
 8.  Power down VirtualBox and take a snapshot.
 
-FILL THE PACKAGE DIRECTORY
+UPDATE THE PACKAGE DIRECTORY
 1.  Some of the information in the package directory will be outdated, and you need to update it.  As root, enter "apt-get update" to update the package directory.
 2.  After the package directory has been filled, power down VirtualBox and take a snapshot.
 
