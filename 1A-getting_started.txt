@@ -3,7 +3,8 @@ SUMMARY
 ALL procedures described in this file are to be done in the guest OS.
 2.  Set up guest additions to allow you to share files between the host and guest OS.
 3.  Update the package directory.
-4.  Install and set up Git.
+4.  Replace Xfce Terminal with ROX terminal.
+5.  Install and set up Git.
 
 INSTALLING LMDE
 1.  Install Linux Mine Debian Edition with Xfce as the guest OS in VirtualBox.
@@ -31,6 +32,10 @@ UPDATE THE PACKAGE DIRECTORY
 1.  Some of the information in the package directory will be outdated, and you need to update it.  As root, enter 
 "apt-get update" to update the package directory.
 2.  After the package directory has been filled, power down VirtualBox and take a snapshot.
+
+REPLACE XFCE TERMINAL WITH ROX TERMINAL
+1.  Add RoxTerm.  As root in the guest OS, enter "apt-get install -y roxterm".
+2.  Delete Xfce Terminal.  Enter "apt-get remove -y xfce4-terminal".
 
 INSTALL AND SET UP GIT
 1.  Follow the instructions at http://help.github.com/linux-set-up-git/ .
