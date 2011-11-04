@@ -19,7 +19,9 @@ cd /media/VBOX*
 sh VBoxLinuxAdditions.run
 4.  From the guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your 
 host OS.  Select "Make Permanent" option but NOT the auto-mount option.
-5.  As root in the guest OS, enter "mount -t vboxsf guest /mnt/host".  
+5.  As root in the guest OS, enter the following commands:
+mkdir /mnt/host
+mount -t vboxsf guest /mnt/host
 6.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host 
 OS.  If you add a test file to the /home/(host OS username)/share directory in the host OS, it should be available in 
 the /mnt/host directory in the guest OS.  (You may need to reload Thunar to see it.)
