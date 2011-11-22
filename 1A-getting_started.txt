@@ -7,16 +7,16 @@ ALL procedures described in this file are to be done in the guest OS.
 5.  Install and set up Git.
 
 INSTALLING LMDE
-1.  Install Linux Mine Debian Edition with Xfce as the guest OS in VirtualBox.
+1.  Install Linux Mint Debian Edition with GNOME as the guest OS in VirtualBox.
 2.  When you are finished, shut down the guest OS and take a snapshot.
 
 SET UP GUEST ADDITIONS (allows you to share files between the host and guest OS)
-1.  In the guest OS, go to the VirtualBox bar. Go to Devices -> Guest Additions.
-2.  Click on the VBOXADDITIONS icon that appears on the desktop.  This mounts the guest additions.
-3.  As root in the guest OS, enter the following commands:
-mkdir /mnt/host
-cd /media/VBOX*
-sh VBoxLinuxAdditions.run
+1.  In the guest OS, go to the VirtualBox bar. Go to Devices -> Guest Additions.  This mounts the guest additions to
+the virtual CD drive.
+2.  Open the Nautilus file manager.  (You can do this by clicking on the "Computer" or "Home" icons on the desktop.)
+Click on the "Open Autorun Prompt" button to run the guest additions.  (Alternative method to run the guest additions: 
+From the command line, become root and enter the commands "cd /media/VBOX*" and "sh VBoxLinuxAdditions.run".)
+3.  As root in the guest OS, enter "mkdir /mnt/host".
 4.  From the guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your 
 host OS.  Select "Make Permanent" option but NOT the auto-mount option.
 5.  As root in the guest OS, enter the following commands:
@@ -24,7 +24,7 @@ mkdir /mnt/host
 mount -t vboxsf guest /mnt/host
 6.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host 
 OS.  If you add a test file to the /home/(host OS username)/share directory in the host OS, it should be available in 
-the /mnt/host directory in the guest OS.  (You may need to reload Thunar to see it.)
+the /mnt/host directory in the guest OS.  (You may need to reload Nautilus to see it.)
 7.  PLEASE NOTE: The file sharing capability is NOT automatic.  Each time you boot up the guest OS, you'll have to 
 become root in the guest OS and enter "mount -t vboxsf guest /mnt/host" in order to resume sharing files between the 
 guest and host OS.
@@ -34,10 +34,6 @@ UPDATE THE PACKAGE DIRECTORY
 1.  Some of the information in the package directory will be outdated, and you need to update it.  As root, enter 
 "apt-get update" to update the package directory.
 2.  After the package directory has been filled, power down VirtualBox and take a snapshot.
-
-REPLACE XFCE TERMINAL WITH ROX TERMINAL
-1.  Add RoxTerm.  As root in the guest OS, enter "apt-get install -y roxterm".
-2.  Delete Xfce Terminal.  Enter "apt-get remove -y xfce4-terminal".
 
 INSTALL AND SET UP GIT
 1.  Follow the instructions at http://help.github.com/linux-set-up-git/ .
