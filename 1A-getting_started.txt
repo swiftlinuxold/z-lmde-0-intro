@@ -3,8 +3,7 @@ SUMMARY
 ALL procedures described in this file are to be done in the guest OS.
 2.  Set up guest additions to allow you to share files between the host and guest OS.
 3.  Update the package directory.
-4.  Replace Xfce Terminal with ROX terminal.
-5.  Install and set up Git.
+4.  Install and set up Git.
 
 INSTALLING LMDE
 1.  Install Linux Mint Debian Edition with GNOME as the guest OS in VirtualBox.
@@ -13,9 +12,12 @@ INSTALLING LMDE
 SET UP GUEST ADDITIONS (allows you to share files between the host and guest OS)
 1.  In the guest OS, go to the VirtualBox bar. Go to Devices -> Guest Additions.  This mounts the guest additions to
 the virtual CD drive.
-2.  Open the Nautilus file manager.  (You can do this by clicking on the "Computer" or "Home" icons on the desktop.)
-Click on the "Open Autorun Prompt" button to run the guest additions.  (Alternative method to run the guest additions: 
-From the command line, become root and enter the commands "cd /media/VBOX*" and "sh VBoxLinuxAdditions.run".)
+2.  You'll be asked whether you wish to automatically run the VBOXADDITIONS software.  Select OK to run it.  This runs
+the guest additions.  
+2A.  ALTERNATE METHOD to run the guest additions: Open the Nautilus file manager.  (You can do this by clicking on the 
+"Computer" or "Home" icons on the desktop.)  Click on the "Open Autorun Prompt" button to run the guest additions.
+2B.  ANOTHER METHOD to run the guest additions: From the command line, become root and enter the commands 
+"cd /media/VBOX*" and "sh VBoxLinuxAdditions.run".)
 3.  As root in the guest OS, enter "mkdir /mnt/host".
 4.  From the guest OS, go to Devices -> Shared Folders and select the /home/(host username)/guest directory on your 
 host OS.  Select "Make Permanent" option but NOT the auto-mount option.
