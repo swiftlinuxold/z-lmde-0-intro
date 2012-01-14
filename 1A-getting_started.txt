@@ -3,7 +3,8 @@ SUMMARY
 ALL procedures described in this file are to be done in the guest OS.
 2.  Set up guest additions to allow you to share files between the host and guest OS.
 3.  Update the package directory.
-4.  Install and set up Git.
+4.  Install mintConstructor.
+5.  Install and set up Git.
 
 INSTALLING LMDE
 1.  Install Linux Mint Debian Edition with GNOME as the guest OS in VirtualBox.
@@ -36,6 +37,10 @@ UPDATE THE PACKAGE DIRECTORY
 1.  Some of the information in the package directory will be outdated, and you need to update it.  As root, enter 
 "apt-get update" to update the package directory.
 2.  After the package directory has been filled, power down VirtualBox and take a snapshot.
+
+INSTALL MINTCONSTRUCTOR
+1.  As root, enter "apt-get install mintConstructor" to download the package for remastering Linux Mint Debian Edition.
+This package is necessary for creating the Swift Linux ISO.
 
 INSTALL AND SET UP GIT
 1.  Follow the instructions at http://help.github.com/linux-set-up-git/ .
