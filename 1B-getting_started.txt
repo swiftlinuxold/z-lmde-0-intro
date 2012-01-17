@@ -1,15 +1,14 @@
 DOWNLOAD GITHUB REPOSITORIES
-1.  As a user (NOT root), enter the command "cd ~/develop".
-2.  Enter the command "git clone (GIT URL)".  The GIT URL is the URL of the repository you need to download and can be found on GitHub.  For example, you can find the URL of the 9-test-github repository on GitHub by going to https://github.com/swiftlinux , selecting the 9-test-github repository (which takes you to https://github.com/swiftlinux/9-test-github), clicking on the SSH button, and looking at the URL just to the right of the "Git Read-Only" button.  In this case, the URL is 
-git@github.com:swiftlinux/9-test-github.git .  Thus the command to download the 9-test-github repositories are:
-
+1.  If you have any GNOME Terminal windows open, close them.  Use only ROX Terminal, because GNOME Terminal is eliminated during the process of transforming LMDE into Swift Linux.  If you're still using GNOME Terminal, your view of what's happening will disappear.
+2.  As a user (NOT root), enter the command "cd ~/develop".
+3.  Enter the command "git clone (GIT URL)".  The GIT URL is the URL of the repository you need to download and can be found on GitHub.  For example, you can find the URL of the 9-test-github repository on GitHub by going to https://github.com/swiftlinux , selecting the 9-test-github repository (which takes you to https://github.com/swiftlinux/9-test-github), clicking on the SSH button, and looking at the URL just to the right of the "Git Read-Only" button.  In this case, the URL is git@github.com:swiftlinux/9-test-github.git .  Thus the command to download the 9-test-github repositories are:
 mkdir ~/develop
 cd ~/develop
 git clone git@github.com:swiftlinux/9-test-github.git
 
-3.  If you do not have a /home/(username)/develop/9-test-github, then you don't have Git set up 
+4.  If you do not have a /home/(username)/develop/9-test-github, then you don't have Git set up 
 properly.
-4.  If the 9-test-github repository did properly download, shut down the guest OS and take a
+5.  If the 9-test-github repository did properly download, shut down the guest OS and take a
 snapshot.
 
 DOWNLOADING ADDITIONAL GITHUB REPOSITORIES

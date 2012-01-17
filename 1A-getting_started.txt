@@ -1,10 +1,10 @@
 SUMMARY
-1.  Install LMDE in VirtualBox.  You need the guest OS for working on Swift Linux.  Unless otherwise noted, 
-ALL procedures described in this file are to be done in the guest OS.
+1.  Install LMDE in VirtualBox.  You need the guest OS for working on Swift Linux.  Unless otherwise noted, ALL procedures described in this file are to be done in the guest OS.
 2.  Set up guest additions to allow you to share files between the host and guest OS.
 3.  Update the package directory.
-4.  Install mintConstructor.
-5.  Install and set up Git.
+4.  Remove GNOME Screen Saver.
+5.  Install ROX Terminal and mintConstructor.
+6.  Install and set up Git.
 
 INSTALLING LMDE
 1.  Install Linux Mint Debian Edition with GNOME as the guest OS in VirtualBox.
@@ -15,8 +15,7 @@ SET UP GUEST ADDITIONS (allows you to share files between the host and guest OS)
 the virtual CD drive.
 2.  You'll be asked whether you wish to automatically run the VBOXADDITIONS software.  Select OK to run it.  This runs
 the guest additions.  
-2A.  ALTERNATE METHOD to run the guest additions: Open the Nautilus file manager.  (You can do this by clicking on the 
-"Computer" or "Home" icons on the desktop.)  Click on the "Open Autorun Prompt" button to run the guest additions.
+2A.  ALTERNATE METHOD to run the guest additions: Open the Nautilus file manager.  (You can do this by clicking on the "Computer" or "Home" icons on the desktop.)  Click on the "Open Autorun Prompt" button to run the guest additions.
 2B.  ANOTHER METHOD to run the guest additions: From the command line, become root and enter the commands 
 "cd /media/VBOX*" and "sh VBoxLinuxAdditions.run".)
 3.  As root in the guest OS, enter "mkdir /mnt/host".
@@ -25,9 +24,7 @@ host OS.  Select "Make Permanent" option but NOT the auto-mount option.
 5.  As root in the guest OS, enter the following commands:
 mkdir /mnt/host
 mount -t vboxsf guest /mnt/host
-6.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host 
-OS.  If you add a test file to the /home/(host OS username)/share directory in the host OS, it should be available in 
-the /mnt/host directory in the guest OS.  (You may need to reload Nautilus to see it.)
+6.  Now the /mnt/host directory in the guest OS is mirrored by the /home/(host OS username)/share directory in the host OS.  If you add a test file to the /home/(host OS username)/share directory in the host OS, it should be available in the /mnt/host directory in the guest OS.  (You may need to reload Nautilus to see it.)
 7.  PLEASE NOTE: The file sharing capability is NOT automatic.  Each time you boot up the guest OS, you'll have to 
 become root in the guest OS and enter "mount -t vboxsf guest /mnt/host" in order to resume sharing files between the 
 guest and host OS.
@@ -38,9 +35,11 @@ UPDATE THE PACKAGE DIRECTORY
 "apt-get update" to update the package directory.
 2.  After the package directory has been filled, power down VirtualBox and take a snapshot.
 
-INSTALL MINTCONSTRUCTOR
-1.  As root, enter "apt-get install mintConstructor" to download the package for remastering Linux Mint Debian Edition.
-This package is necessary for creating the Swift Linux ISO.
+REMOVE GNOME SCREEN SAVER
+1.  As root, enter "apt-get remove gnome-screensaver".  This is necessary because GNOME screen saver is removed in the process of transforming LMDE into Swift Linux.  If GNOME screen saver is activated when it gets removed, you will be greeted by a blank and frozen screen and have no control.
+
+INSTALL ROX TERMINAL AND MINTCONSTRUCTOR
+1.  As root, enter "apt-get install roxterm mintConstructor" to download ROX Terminal and mintConstructor.  You need ROX terminal because the default GNOME terminal is deleted during the process of transforming LMDE into Swift Linux.  You need mintConstructor for creating the Swift Linux ISO.
 
 INSTALL AND SET UP GIT
 1.  Follow the instructions at http://help.github.com/linux-set-up-git/ .
