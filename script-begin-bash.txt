@@ -16,7 +16,7 @@ DIR_DEVELOP=''
 # Check to see if this script is operating in chroot mode.
 # /home/mint directory only exists in chroot mode
 IS_CHROOT=0
-if [ -d "/usr/lib/live-installer" ]; then
+if [ -d "/home/mint" ]; then
 	IS_CHROOT=1 # in chroot mode
 	DIR_DEVELOP=/usr/local/bin/develop 
 else

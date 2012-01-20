@@ -12,7 +12,7 @@ uname=pwd.getpwuid(1000)[0]
 # The remastering process uses chroot mode.
 # Check to see if this script is operating in chroot mode.
 # /home/mint directory only exists in chroot mode
-is_chroot = os.path.exists('/usr/lib/live-installer')
+is_chroot = os.path.exists('/home/mint')
 dir_develop=''
 if (is_chroot):
 	dir_develop='/usr/local/bin/develop'	
