@@ -21,5 +21,5 @@ else:
 	dir_develop='/home/' + uname + '/develop'
 	dir_user = '/home/' + uname
 
-# Everything up to this point is common to all Python scripts called by shared-* scripts
-# ======================================================================================
+# Everything up to this point is common to all Python scripts NOT called by shared-* scripts
+# ==========================================================================================
