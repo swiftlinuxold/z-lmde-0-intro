@@ -1,15 +1,9 @@
-DOWNLOAD GITHUB REPOSITORIES
-1.  If you have any GNOME Terminal windows open, close them.  Use only ROX Terminal, because GNOME Terminal is eliminated during the process of transforming LMDE into Swift Linux.  If you're still using GNOME Terminal, your view of what's happening will disappear.
-2.  As a user (NOT root), enter the command "cd ~/develop".
-3.  Enter the command "git clone (GIT URL)".  The GIT URL is the URL of the repository you need to download and can be found on GitHub.  For example, you can find the URL of the 9-test-github repository on GitHub by going to https://github.com/swiftlinux , selecting the 9-test-github repository (which takes you to https://github.com/swiftlinux/9-test-github), clicking on the SSH button, and looking at the URL just to the right of the "Git Read-Only" button.  In this case, the URL is git@github.com:swiftlinux/9-test-github.git .  Thus the command to download the 9-test-github repositories are:
-mkdir ~/develop
+DOWNLOADING ALL ESSENTIAL REPOSITORIES
+1.  As a user (NOT root), enter the following commands:
 cd ~/develop
-git clone git@github.com:swiftlinux/9-test-github.git
-
-4.  If you do not have a /home/(username)/develop/9-test-github, then you don't have Git set up 
-properly.
-5.  If the 9-test-github repository did properly download, shut down the guest OS and take a
-snapshot.
+git clone git@github.com:swiftlinux/1-build.git
+cd 1-build
+sh preinstall.sh
 
 DOWNLOADING ADDITIONAL GITHUB REPOSITORIES
 1.  As a user (NOT root), enter "cd ~/develop".
@@ -24,4 +18,10 @@ git@github.com:swiftlinux/0-intro.git .  Thus the command to download the 0-intr
 4.  Please note that the 1-build repository contains a script for downloading multiple 
 repositories.
 
-
+PURPOSES OF REPOSITORIES:
+0-intro: basic procedures for working on Swift Linux
+1-build: integrates all of the other repositories to transform antiX Linux into Swift Linux
+2-checklists: checklists for Swift Linux
+9-test-github: for testing out GitHub if you're not already familiar with it
+z-antix-x: repositories left over from the antiX Era that need to be updated for the LMDE Era
+z-obsolete-x: obsolete repositories kept for historical purposes
