@@ -2,10 +2,9 @@ SUMMARY
 1.  Install LMDE in VirtualBox.  You need the guest OS for working on Swift Linux.  Unless otherwise noted, ALL procedures described in this file are to be done in the guest OS.
 2.  Set up guest additions to allow you to share files between the host and guest OS.
 3.  Update the package directory.
-4.  Remove GNOME Screen Saver.
-5.  Install ROX Terminal and mintConstructor.
-6.  Remove GNOME Terminal
-7.  Install and set up Git.
+4.  Install ROX Terminal and mintConstructor.
+5.  Remove MATE Terminal
+6.  Install and set up Git.
 
 INSTALLING LMDE
 1.  Install Linux Mint Debian Edition with GNOME as the guest OS in VirtualBox.
@@ -35,14 +34,11 @@ UPDATE THE PACKAGE DIRECTORY
 "apt-get update" to update the package directory.
 2.  After the package directory has been filled, power down VirtualBox and take a snapshot.
 
-REMOVE GNOME SCREEN SAVER
-1.  As root, enter "apt-get purge gnome-screensaver".  This is necessary because GNOME screen saver is removed in the process of transforming LMDE into Swift Linux.  If GNOME screen saver is activated when it gets removed, you will be greeted by a blank and frozen screen and have no control.
-
 INSTALL ROX TERMINAL AND MINTCONSTRUCTOR
 1.  As root, enter "apt-get install roxterm mintConstructor" to download ROX Terminal and mintConstructor.  You need ROX terminal because the default GNOME terminal is deleted during the process of transforming LMDE into Swift Linux.  You need mintConstructor for creating the Swift Linux ISO.
 
-REMOVE GNOME TERMINAL
-1.  As root in ROX Terminal, enter "apt-get purge gnome-terminal".  The process of transforming LMDE into Swift Linux involves removing GNOME Terminal.  If you execute this process from within GNOME Terminal, you may lose your ability to monitor the action.
+REMOVE MATE TERMINAL
+1.  As root in ROX Terminal, enter "apt-get purge mate-terminal".  The process of transforming LMDE into Swift Linux involves removing GNOME Terminal.  If you execute this process from within GNOME Terminal, you may lose your ability to monitor the action.
 
 INSTALL AND SET UP GIT
 1.  Follow the instructions at http://help.github.com/linux-set-up-git/ .
