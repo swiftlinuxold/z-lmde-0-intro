@@ -2,8 +2,8 @@ SUMMARY
 1.  Install LMDE in VirtualBox.  You need the guest OS for working on Swift Linux.  Unless otherwise noted, ALL procedures described in this file are to be done in the guest OS.
 2.  Set up guest additions to allow you to share files between the host and guest OS.
 3.  Update the package directory.
-4.  Install ROX Terminal and mintConstructor.
-5.  Remove MATE Terminal
+4.  Install ROX Terminal.
+5.  Remove MATE Terminal.
 6.  Install and set up Git.
 
 INSTALLING LMDE
