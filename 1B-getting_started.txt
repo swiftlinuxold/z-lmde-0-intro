@@ -1,5 +1,6 @@
 DOWNLOADING ALL ESSENTIAL REPOSITORIES
 1.  As a user (NOT root), enter the following commands:
+mkdir ~/develop
 cd ~/develop
 git clone git@github.com:swiftlinux/1-build.git
 cd 1-build
@@ -22,6 +23,7 @@ PURPOSES OF REPOSITORIES:
 0-intro: basic procedures for working on Swift Linux
 1-build: integrates all of the other repositories to transform antiX Linux into Swift Linux
 2-checklists: checklists for Swift Linux
+3-changelog: changelogs for past versions of Swift Linux, plans for the next version of Swift Linux
 9-test-github: for testing out GitHub if you're not already familiar with it
 z-antix-x: repositories left over from the antiX Era that need to be updated for the LMDE Era
 z-obsolete-x: obsolete repositories kept for historical purposes

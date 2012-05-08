@@ -7,8 +7,10 @@ SUMMARY
 6.  Install and set up Git.
 
 INSTALLING LMDE
-1.  Install Linux Mint Debian Edition with GNOME as the guest OS in VirtualBox.
-2.  When you are finished, shut down the guest OS and take a snapshot.
+1.  Install Swift Linux or LMDE as your host OS.
+2.  Install VirtualBox through Apt-Get or Synaptic on your host OS.  The packages you need are virtualbox, virtualbox-dkms, and virtualbox-guest-additions-iso.  Without the virtualbox-guest-additions-iso package, you cannot share files between the host and guest OS.  Without the virtualbox-dkms package, the X window system on the guest OS may mysteriously stop working properly when you try to switch to another display manager.  If you bypass Apt-Get and Synaptic to install VirtualBox, you risk destabilizing the package management system on your host OS.
+3.  Install the latest version of Linux Mint Debian Edition with GNOME as the guest OS in VirtualBox.
+4.  When you are finished, shut down the guest OS and take a snapshot.
 
 SET UP GUEST ADDITIONS (allows you to share files between the host and guest OS)
 1.  In the guest OS, go to the VirtualBox bar. Go to Devices -> Guest Additions.  This mounts the guest additions to
@@ -34,8 +36,8 @@ UPDATE THE PACKAGE DIRECTORY
 "apt-get update" to update the package directory.
 2.  After the package directory has been filled, power down VirtualBox and take a snapshot.
 
-INSTALL ROX TERMINAL AND MINTCONSTRUCTOR
-1.  As root, enter "apt-get install roxterm mintConstructor" to download ROX Terminal and mintConstructor.  You need ROX terminal because the default GNOME terminal is deleted during the process of transforming LMDE into Swift Linux.  You need mintConstructor for creating the Swift Linux ISO.
+INSTALL ROX TERMINAL
+1.  As root, enter "apt-get install roxterm" to download ROX Terminal and mintConstructor.  You need ROX terminal because the default GNOME terminal is deleted during the process of transforming LMDE into Swift Linux.  You need mintConstructor for creating the Swift Linux ISO.
 
 REMOVE MATE TERMINAL
 1.  As root in ROX Terminal, enter "apt-get purge mate-terminal".  The process of transforming LMDE into Swift Linux involves removing GNOME Terminal.  If you execute this process from within GNOME Terminal, you may lose your ability to monitor the action.
